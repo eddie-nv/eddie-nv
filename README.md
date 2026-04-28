@@ -65,7 +65,13 @@ State fabric for coding agents. MCP server that lets a Claude Code or Cursor ses
 ---
 
 <p align="center">
-  <a href="https://git.io/streak-stats"><img src="https://streak-stats.demolab.com?user=eddie-nv&theme=black-ice&hide_border=true&short_numbers=true&background=00000000" alt="GitHub Streak" /></a>
+  <a href="https://git.io/streak-stats">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com?user=eddie-nv&theme=black-ice&hide_border=true&short_numbers=true&background=00000000" />
+      <source media="(prefers-color-scheme: light)" srcset="https://streak-stats.demolab.com?user=eddie-nv&theme=default&hide_border=true&short_numbers=true&background=00000000" />
+      <img src="https://streak-stats.demolab.com?user=eddie-nv&theme=black-ice&hide_border=true&short_numbers=true&background=00000000" alt="GitHub Streak" />
+    </picture>
+  </a>
 </p>
 
 <p align="center">
