@@ -73,7 +73,7 @@ State fabric for coding agents. MCP server that lets a Claude Code or Cursor ses
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/eddie-nv/eddie-nv/output-3d/profile-night-rainbow.svg" alt="3D contribution graph" />
+  <img src="https://raw.githubusercontent.com/eddie-nv/eddie-nv/output-3d/profile-night-view.svg" alt="3D contribution graph" />
 </p>
 
 <p align="center">
