@@ -11,10 +11,12 @@ Building AI-powered tools and agent infrastructure. Bootcamp grad with productio
 ## Experience
 
 **Full-Stack Engineer** · Connect For Purpose · *Nov 2024 – May 2025*
+
 Migrated a large-scale legacy platform from 4D to a Node.js / React / PostgreSQL stack. Wrote endpoint tests validating parity between legacy and new system responses. Applied WCAG accessibility patterns across React components. Contributed to architecture discussions and technical documentation.
 `Node.js` `React` `Jest` `PostgreSQL`
 
 **Full-Stack Engineer** · TouchStone · *Oct 2023 – Apr 2024*
+
 Reduced average query response time from 3,500ms to 74ms through SQL indexing and denormalization. Architected a load balancer to handle 10k RPM, with Redis caching cutting response times by 40%+ under heavy traffic. Built interactive UI features in React.
 `Next.js` `Express` `PostgreSQL` `AWS` `NginX` `Redis`
 
@@ -23,6 +25,7 @@ Reduced average query response time from 3,500ms to 74ms through SQL indexing an
 ## Projects
 
 ### Chef Zeff · *Founder & Engineer · 2025 – Present*
+
 Production-ready AI cooking assistant. Scrapes live grocery store inventory to ground recipe generation in real, purchasable ingredients.
 
 - Semantic caching via HNSW cosine similarity: sub-100ms hits vs 30s fresh LLM generation, 92% cache hit rate
@@ -33,6 +36,7 @@ Production-ready AI cooking assistant. Scrapes live grocery store inventory to g
 `Redis` `Next.js` `PostgreSQL` `LangChain` `Docker` `TypeScript`
 
 ### [Baton](https://github.com/eddie-nv/baton) · *2025*
+
 State fabric for coding agents. MCP server that lets a Claude Code or Cursor session resume mid-sentence after a laptop close, branch switch, or hand-off.
 
 - Hard-capped token budgets (500-token FeatureCard, 1,500-token ResumePacket) enforced exactly via `js-tiktoken` at the write boundary
