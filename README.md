@@ -65,14 +65,6 @@ State fabric for coding agents. MCP server that lets a Claude Code or Cursor ses
 </p>
 
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/eddie-nv/eddie-nv/output/github-snake-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/eddie-nv/eddie-nv/output/github-snake.svg" />
-    <img alt="Snake animation" src="https://raw.githubusercontent.com/eddie-nv/eddie-nv/output/github-snake.svg" />
-  </picture>
-</p>
-
-<p align="center">
   <img src="https://raw.githubusercontent.com/eddie-nv/eddie-nv/output-3d/profile-night-view.svg" alt="3D contribution graph" />
 </p>
 
