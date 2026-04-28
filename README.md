@@ -4,7 +4,7 @@
 
 Building AI-powered tools and agent infrastructure. Bootcamp grad with production experience shipping full-stack systems.
 
-📍 San Francisco · ✉️ ed.nava.valencia@gmail.com · [Portfolio](https://your-portfolio-url) · [LinkedIn](https://linkedin.com/in/your-handle)
+📍 San Francisco · ✉️ ed.nava.valencia@gmail.com · [Portfolio](https://www.ed-nava-valencia.com) · [LinkedIn](https://www.linkedin.com/in/ed-nava-valencia/)
 
 ---
 
@@ -22,7 +22,7 @@ Reduced average query response time from 3,500ms to 74ms through SQL indexing an
 
 ## Projects
 
-### [Chef Zeff](https://github.com/eddie-nv) · *Founder & Engineer · 2025 – Present*
+### Chef Zeff · *Founder & Engineer · 2025 – Present*
 Production-ready AI cooking assistant. Scrapes live grocery store inventory to ground recipe generation in real, purchasable ingredients.
 
 - Semantic caching via HNSW cosine similarity: sub-100ms hits vs 30s fresh LLM generation, 92% cache hit rate
@@ -60,6 +60,12 @@ State fabric for coding agents. MCP server that lets a Claude Code or Cursor ses
 
 ---
 
-![GitHub streak](https://streak-stats.demolab.com?user=eddie-nv&theme=transparent&hide_border=true)
+<p align="center">
+  <img src="https://streak-stats.demolab.com?user=eddie-nv&theme=transparent&hide_border=true" alt="GitHub streak" />
+</p>
 
-[GitHub](https://github.com/eddie-nv) · [LinkedIn](https://linkedin.com/in/your-handle) · [Portfolio](https://your-portfolio-url)
+<p align="center">
+  <a href="https://github.com/eddie-nv">GitHub</a> ·
+  <a href="https://www.linkedin.com/in/ed-nava-valencia/">LinkedIn</a> ·
+  <a href="https://www.ed-nava-valencia.com">Portfolio</a>
+</p>
