@@ -113,32 +113,77 @@ function shortNum(n) {
 
 function renderSVG(stats, mode) {
   const dark = mode === "dark";
+  // black-ice palette: ring/fire/currStreakLabel = #00E7FF (cyan)
+  // dark mode: white nums/labels; light mode: black nums/labels (matches user's URL overrides)
   const numColor = dark ? "#FFFFFF" : "#000000";
-  const labelColor = dark ? "#A4D0E4" : "#000000";
-  const dateColor = dark ? "#A4D0E4" : "#000000";
-  const ringColor = dark ? "#39FF14" : "#000000";
-  const currLabel = dark ? "#39FF14" : "#000000";
-  const fireColor = "#FF6B35";
-  const divider = dark ? "rgba(164,208,228,0.25)" : "rgba(0,0,0,0.2)";
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="495" height="195" viewBox="0 0 495 195" fill="none" font-family="Segoe UI, Ubuntu, sans-serif">
-  <line x1="165" y1="28" x2="165" y2="170" stroke="${divider}" stroke-width="1"/>
-  <line x1="330" y1="28" x2="330" y2="170" stroke="${divider}" stroke-width="1"/>
-  <g transform="translate(82.5, 70)">
-    <text text-anchor="middle" y="0" fill="${numColor}" font-weight="700" font-size="28">${shortNum(stats.total)}</text>
-    <text text-anchor="middle" y="25" fill="${labelColor}" font-weight="400" font-size="14">Total Contributions</text>
-    <text text-anchor="middle" y="80" fill="${dateColor}" font-weight="400" font-size="12">${fmtDate(stats.firstDate)} – Present</text>
+  const labelColor = dark ? "#FFFFFF" : "#000000";
+  const dateColor = "#9F9F9F";
+  const ringColor = "#00E7FF";
+  const currLabel = "#00E7FF";
+  const fireColor = "#00E7FF";
+  const stroke = dark ? "#E4E2E2" : "#9F9F9F";
+  const T = (n) => shortNum(n);
+  const totalNum = T(stats.total);
+  const currNum = T(stats.currentStreak);
+  const longNum = T(stats.longest);
+  const totalRange = `${fmtDate(stats.firstDate)} - Present`;
+  const currRange = stats.currentStreak > 0
+    ? `${fmtDate(stats.currentStart)} - ${fmtDate(stats.currentEnd)}`
+    : "—";
+  const longRange = stats.longest > 0
+    ? `${fmtDate(stats.longestStart)} - ${fmtDate(stats.longestEnd)}`
+    : "—";
+
+  return `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="isolation:isolate" viewBox="0 0 495 195" width="495px" height="195px">
+  <style>
+    @keyframes currstreak { 0%{font-size:3px;opacity:.2} 80%{font-size:34px;opacity:1} 100%{font-size:28px;opacity:1} }
+    @keyframes fadein { 0%{opacity:0} 100%{opacity:1} }
+  </style>
+  <defs>
+    <mask id="mask_out_ring_behind_fire">
+      <rect width="495" height="195" fill="white"/>
+      <ellipse cx="247.5" cy="32" rx="13" ry="18" fill="black"/>
+    </mask>
+  </defs>
+
+  <line x1="165" y1="28" x2="165" y2="170" vector-effect="non-scaling-stroke" stroke-width="1" stroke="${stroke}" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/>
+  <line x1="330" y1="28" x2="330" y2="170" vector-effect="non-scaling-stroke" stroke-width="1" stroke="${stroke}" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/>
+
+  <g transform="translate(82.5, 48)">
+    <text x="0" y="32" text-anchor="middle" fill="${numColor}" font-family="'Segoe UI', Ubuntu, sans-serif" font-weight="700" font-size="28px" style="opacity:0;animation:fadein .5s linear forwards .6s">${totalNum}</text>
   </g>
-  <g transform="translate(247.5, 70)">
-    <circle cx="0" cy="-15" r="40" fill="none" stroke="${ringColor}" stroke-width="1.5"/>
-    <text text-anchor="middle" y="0" fill="${numColor}" font-weight="700" font-size="28">${shortNum(stats.currentStreak)}</text>
-    <text text-anchor="middle" y="25" fill="${currLabel}" font-weight="700" font-size="14">Current Streak</text>
-    <text text-anchor="middle" y="80" fill="${dateColor}" font-weight="400" font-size="12">${fmtDate(stats.currentStart)} – ${fmtDate(stats.currentEnd)}</text>
-    <path transform="translate(-9, -68)" d="M9 0c-1 4-3 5-5 8c-2 3-1 7 1 9c-2-3 0-6 3-7c-1 3 1 6 4 6c3 0 5-3 5-6c0-4-4-7-8-10z" fill="${fireColor}"/>
+  <g transform="translate(82.5, 84)">
+    <text x="0" y="32" text-anchor="middle" fill="${labelColor}" font-family="'Segoe UI', Ubuntu, sans-serif" font-weight="400" font-size="14px" style="opacity:0;animation:fadein .5s linear forwards .7s">Total Contributions</text>
   </g>
-  <g transform="translate(412.5, 70)">
-    <text text-anchor="middle" y="0" fill="${numColor}" font-weight="700" font-size="28">${shortNum(stats.longest)}</text>
-    <text text-anchor="middle" y="25" fill="${labelColor}" font-weight="400" font-size="14">Longest Streak</text>
-    <text text-anchor="middle" y="80" fill="${dateColor}" font-weight="400" font-size="12">${fmtDate(stats.longestStart)} – ${fmtDate(stats.longestEnd)}</text>
+  <g transform="translate(82.5, 114)">
+    <text x="0" y="32" text-anchor="middle" fill="${dateColor}" font-family="'Segoe UI', Ubuntu, sans-serif" font-weight="400" font-size="12px" style="opacity:0;animation:fadein .5s linear forwards .8s">${totalRange}</text>
+  </g>
+
+  <g transform="translate(247.5, 108)">
+    <text x="0" y="32" text-anchor="middle" fill="${currLabel}" font-family="'Segoe UI', Ubuntu, sans-serif" font-weight="700" font-size="14px" style="opacity:0;animation:fadein .5s linear forwards .9s">Current Streak</text>
+  </g>
+  <g transform="translate(247.5, 145)">
+    <text x="0" y="21" text-anchor="middle" fill="${dateColor}" font-family="'Segoe UI', Ubuntu, sans-serif" font-weight="400" font-size="12px" style="opacity:0;animation:fadein .5s linear forwards .9s">${currRange}</text>
+  </g>
+  <g mask="url(#mask_out_ring_behind_fire)">
+    <circle cx="247.5" cy="71" r="40" fill="none" stroke="${ringColor}" stroke-width="5" style="opacity:0;animation:fadein .5s linear forwards .4s"/>
+  </g>
+  <g transform="translate(247.5, 19.5)" stroke-opacity="0" style="opacity:0;animation:fadein .5s linear forwards .6s">
+    <path d="M -12 -0.5 L 15 -0.5 L 15 23.5 L -12 23.5 L -12 -0.5 Z" fill="none"/>
+    <path d="M 1.5 0.67 C 1.5 0.67 2.24 3.32 2.24 5.47 C 2.24 7.53 0.89 9.2 -1.17 9.2 C -3.23 9.2 -4.79 7.53 -4.79 5.47 L -4.76 5.11 C -6.78 7.51 -8 10.62 -8 13.99 C -8 18.41 -4.42 22 0 22 C 4.42 22 8 18.41 8 13.99 C 8 8.6 5.41 3.79 1.5 0.67 Z M -0.29 19 C -2.07 19 -3.51 17.6 -3.51 15.86 C -3.51 14.24 -2.46 13.1 -0.7 12.74 C 1.07 12.38 2.9 11.53 3.92 10.16 C 4.31 11.45 4.51 12.81 4.51 14.2 C 4.51 16.85 2.36 19 -0.29 19 Z" fill="${fireColor}" stroke-opacity="0"/>
+  </g>
+  <g transform="translate(247.5, 48)">
+    <text x="0" y="32" text-anchor="middle" fill="${numColor}" font-family="'Segoe UI', Ubuntu, sans-serif" font-weight="700" font-size="28px" style="animation:currstreak .6s linear forwards">${currNum}</text>
+  </g>
+
+  <g transform="translate(412.5, 48)">
+    <text x="0" y="32" text-anchor="middle" fill="${numColor}" font-family="'Segoe UI', Ubuntu, sans-serif" font-weight="700" font-size="28px" style="opacity:0;animation:fadein .5s linear forwards 1.2s">${longNum}</text>
+  </g>
+  <g transform="translate(412.5, 84)">
+    <text x="0" y="32" text-anchor="middle" fill="${labelColor}" font-family="'Segoe UI', Ubuntu, sans-serif" font-weight="400" font-size="14px" style="opacity:0;animation:fadein .5s linear forwards 1.3s">Longest Streak</text>
+  </g>
+  <g transform="translate(412.5, 114)">
+    <text x="0" y="32" text-anchor="middle" fill="${dateColor}" font-family="'Segoe UI', Ubuntu, sans-serif" font-weight="400" font-size="12px" style="opacity:0;animation:fadein .5s linear forwards 1.4s">${longRange}</text>
   </g>
 </svg>`;
 }
