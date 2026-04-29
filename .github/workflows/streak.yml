@@ -1,0 +1,35 @@
+name: Generate Streak
+
+on:
+  schedule:
+    - cron: "0 6 * * *"
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Generate streak SVGs
+        run: node scripts/generate-streak.mjs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_PAT: ${{ secrets.GH_PAT }}
+          USERNAME: eddie-nv
+
+      - uses: crazy-max/ghaction-github-pages@v3.1.0
+        with:
+          target_branch: output-streak
+          build_dir: dist-streak
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
