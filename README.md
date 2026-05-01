@@ -72,6 +72,7 @@ State fabric for coding agents. MCP server that lets a Claude Code or Cursor ses
 ## Education
 
 **Hack Reactor** · Advanced Software Engineering Immersive · *Jun 2025 – Sept 2025*
+
 500+ hours of pair programming, algorithms, full-stack, and AI application development.
 
 ---
