@@ -1,10 +1,10 @@
 # Eduardo Nava-Valencia
 
 <p align="center"><sub><em>
-Cook how you want, but don't add ingredients and don't take none out. That's the recipe.<br />
-It gets hot in that kitchen, and not everything works right, but you still gotta cook.<br />
-People coming with plates. They gotta be fed.<br />
-And if you sit down expecting somebody to cook for you, you'll realize ain't nobody cooking for you.<br />
+Cook how you want to cook, but don't add ingredients and don't take none out. That's the recipe.<br />
+It gets hot in the kitchen, and not everything will work properly, but you still gotta cook.<br />
+People will come with plates. They gotta be fed.<br />
+Even if you want to go sit down and eat a plate yourself and realize ain't nobody cooking for you.<br />
 You're the chef.
 </em></sub></p>
 
