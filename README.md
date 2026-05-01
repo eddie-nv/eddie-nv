@@ -16,7 +16,7 @@ You're the chef.
 
 Building AI-powered tools and agent infrastructure. Bootcamp grad with production experience shipping full-stack systems.
 
-📍 San Francisco · ✉️ ed.nava.valencia@gmail.com · [Portfolio](https://www.ed-nava-valencia.com) · [LinkedIn](https://www.linkedin.com/in/ed-nava-valencia/)
+📍 San Francisco · ✉️ ed.nava.valencia@gmail.com
 
 ---
 
@@ -89,7 +89,7 @@ State fabric for coding agents. MCP server that lets a Claude Code or Cursor ses
 </p>
 
 <p align="center">
-  <a href="https://x.com/e_nava_valencia">X</a> ·
   <a href="https://www.linkedin.com/in/ed-nava-valencia/">LinkedIn</a> ·
   <a href="https://www.ed-nava-valencia.com">Portfolio</a>
+  <a href="https://x.com/e_nava_valencia">X</a> ·
 </p>
