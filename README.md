@@ -12,7 +12,7 @@ You're the chef.
 
 ---
 
-**Full-Stack Engineer** · San Francisco, CA
+**Full-Stack Engineer**
 
 Building AI-powered tools and agent infrastructure. Bootcamp grad with production experience shipping full-stack systems.
 
@@ -90,6 +90,6 @@ State fabric for coding agents. MCP server that lets a Claude Code or Cursor ses
 
 <p align="center">
   <a href="https://www.linkedin.com/in/ed-nava-valencia/">LinkedIn</a> ·
-  <a href="https://www.ed-nava-valencia.com">Portfolio</a>
-  <a href="https://x.com/e_nava_valencia">X</a> ·
+  <a href="https://www.ed-nava-valencia.com">Portfolio</a> ·
+  <a href="https://x.com/e_nava_valencia">X</a>
 </p>
