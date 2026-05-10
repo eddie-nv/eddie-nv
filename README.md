@@ -52,9 +52,13 @@ State fabric for coding agents. MCP server that lets a Claude Code or Cursor ses
 ## Stack
 
 **Languages** JavaScript (ES6+), TypeScript, SQL, HTML, CSS
+
 **Frontend** React, Next.js, React Native / Expo, Mantine UI, Webpack, Babel
+
 **Backend** Node.js, Express, PostgreSQL, MongoDB, Redis, REST APIs
+
 **AI / LLM** LangChain, Claude Code, MCP, multi-agent pipelines, prompt engineering
+
 **DevOps** Git, Docker, CI/CD, AWS (EC2, S3), GCP, NginX, Render, Jest, ESLint
 
 ---
